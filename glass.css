@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+section::before{
+content: "";
+/* background: rgb(255,152,152);
+ background: radial-gradient(circle, rgba(255,152,152,1) 69%, rgba(255,255,255,1) 100%); */
+ background-image: linear-gradient( 135deg, #ff9a9e  10%, #F6416C 100%);
+position: absolute;
+width: 100vw;
+height: 100vh;
+}
+.circles::before{
+content: "";
+background-image: linear-gradient( 135deg, #F6416C 10%, #ff9a9e 100%);
+position: absolute;
+width: 300px;
+height: 300px;
+left: -100px;
+top: -5px;
+border-radius:0% 0% 100% 0%;
+z-index:0;
+}
+.circles::after{
+content: "";
+background-image: linear-gradient( 135deg, #F6416C 10%, #ff9a9e 100%);
+position: absolute;
+width: 250px;
+height: 250px;
+border-radius:100% 0% 0% 0%;
+/* left :400px; */
+left:calc(100vw - 250px);
+top: calc(100vh - 250px);
+}
+.contents{
+    z-index: 5;
+    width: 95vw;
+    height: 95vh;
+    background-color: rgba(255, 255, 255, 0.171);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    position: relative;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    
+    box-sizing: border-box;
+    font-size: 20px;
+}
+ul{
+    width: 30%;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    justify-content: space-around;
+}
+ul li a{
+   text-decoration: none;
+   color: black;
+ font-weight: 800;
+
+}
+li a:hover{
+    color: white;
+}
+.buttons{
+    width: 15%;
+    display: flex;
+    gap :10px;
+    justify-content: space-around;
+}
+.buttons button{
+    font-size: 20px;
+    background-image: linear-gradient( 135deg, #ff9a9e  10%, #F6416C 100%);
+    border-radius: 10%;
+    border: 0px;
+    padding: 10px;
+}
+main{
+position: absolute;
+top: 30%;
+width: 50%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 30px;
+}
+main h1{
+    font-size: 30px;
+}
+main p{
+    font-size: 20px;
+}
+.foot{
+    padding: 10px;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    width: calc(95vw - 40px);
+    align-items: center;
+    gap: 10px;
+    justify-content: right;
+
+}
+.vid{
+    display: flex;
+}
+@media (max-width:790px) {
+    nav{
+        flex-direction: column;
+        gap: 10px;
+        height: 150px;
+    }
+    ul{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+   
+}
+@media (max-width:430px) {
+    main{
+        width: calc(95vw - 40px);
+        padding: 0;
+    }
+    
+}
